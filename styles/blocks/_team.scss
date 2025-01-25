@@ -10,10 +10,11 @@
 
   @include laptop {
     --personImageSize: #{rem(50)};
+
     padding: rem(8);
   }
 
-  @include laptop {
+  @include tablet {
     --personImageSize: #{rem(40)};
   }
 
@@ -30,6 +31,5 @@
     &:not(:first-child) {
       margin-left: calc(var(--personImageSize) / 4 * -1);
     }
-
   }
 }

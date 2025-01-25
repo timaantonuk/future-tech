@@ -3,7 +3,6 @@
 
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: fluid($max, $min);
-
 }
 
 @mixin hide {
@@ -19,7 +18,7 @@
 @mixin flex-center($isInline: false) {
   @if $isInline {
     display: inline-flex;
-  } @else {
+  } @else  {
     display: flex;
   }
 
@@ -62,4 +61,25 @@
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
+}
+
+@mixin full-vw-centered-line(
+  $property: top,
+  $left: 50%,
+  $right: auto,
+  $translate: -50%
+) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: $left;
+    right: $right;
+    #{$property}: 0;
+    translate: $translate;
+    width: var(--100vw);
+    height: rem(1);
+    background-color: var(--color-dark-15);
+  }
 }

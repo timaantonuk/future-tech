@@ -1,7 +1,6 @@
 @use '../helpers' as *;
 
 .header {
-
   position: sticky;
   z-index: 100;
   top: 0;
@@ -10,24 +9,32 @@
   animation-timeline: scroll();
   animation-range: rem(100) rem(200);
 
-
   @keyframes scrolling-header {
     to {
-      box-shadow: 0 0 1rem 0 var(--color-dark-20);
-
+      box-shadow: 0 0 1rem 0 var(--color-dark-40);
     }
-
   }
 
   &__promo {
     padding-block: rem(20);
-    background-color: var(--color-dark);
     text-align: center;
+    background-color: var(--color-dark);
     border-bottom: var(--border);
-    font-size: rem(18);
 
     @include mobile {
       padding-block: rem(14);
+    }
+
+    @include mobile-s {
+      font-size: rem(12);
+    }
+
+    &-link {
+      .icon {
+        @include mobile-s {
+          column-gap: rem(5);
+        }
+      }
     }
   }
 
@@ -65,13 +72,13 @@
 
       &:not(.is-active) {
         @include hide;
+
         translate: 100%;
       }
     }
   }
 
   &__menu {
-
     @include mobile {
       overflow-y: auto;
     }
@@ -93,7 +100,6 @@
 
     &-link {
       padding: rem(14) rem(24);
-      font-size: rem(18);
       color: var(--color-gray-50);
 
       @include laptop {
@@ -102,14 +108,13 @@
 
       &.is-active {
         color: var(--color-light);
+        font-weight: 500;
         background-color: var(--color-dark);
         border: var(--border);
-        font-weight: 500;
         border-radius: rem(10);
         pointer-events: none;
       }
     }
-
   }
 
   &__contact-us-link {

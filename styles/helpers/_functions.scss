@@ -4,12 +4,12 @@
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
   } @else {
-    @error 'please pass a ONLY NUMBER into argument'
+    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'
   }
 }
 
 @function fluid($max: 100, $min: 10) {
-  $maxViewportWidth: 1920;
+  $maxViewportWidth: 1600;
   $minViewportWidth: 390;
 
   $maxSize: math.div($max, 16);
@@ -21,8 +21,8 @@
   $yAxisIntersection: -$minWidth * $slope + $minSize;
 
   @return clamp(
-          #{$minSize * 1rem},
-          #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
-          #{$maxSize * 1rem}
+    #{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
   );
 }

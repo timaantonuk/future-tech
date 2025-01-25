@@ -37,8 +37,6 @@
             gap: rem(12);
           }
         }
-
-
       }
     }
 
@@ -69,7 +67,6 @@
     @include mobile {
       flex-direction: column;
       row-gap: rem(20);
-
     }
 
     &-menu {
@@ -77,20 +74,11 @@
         display: flex;
       }
 
-      &-item {
-        &:not(:last-child) {
-          &::after {
-            content: '|';
-            margin-inline: rem(11);
-
-          }
-        }
+      &-item:not(:last-child)::after {
+        content: '|';
+        margin-inline: rem(11);
       }
-
-
     }
-
-
   }
 
   &__soc1als {
@@ -98,5 +86,4 @@
       order: -1;
     }
   }
-
 }

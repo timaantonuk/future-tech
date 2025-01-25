@@ -2,14 +2,12 @@
 
 .hero {
   &__main {
-
-
     @include tablet-above {
       display: grid;
       grid-template-columns: 60% auto;
       grid-template-areas:
-    'body resources-preview'
-    'metrics resources-preview';
+        'body resources-preview'
+        'metrics resources-preview';
     }
   }
 
@@ -33,6 +31,7 @@
 
   &__subtitle {
     @include fluid-text(30, 18);
+
     font-family: var(--font-family-accent);
     font-weight: 500;
     color: var(--color-dark-40);
@@ -56,11 +55,27 @@
     }
   }
 
+  &__metrics {
+    grid-area: metrics;
+
+    @include tablet-above {
+      border-top: var(--border);
+    }
+
+    @include tablet {
+      &::before {
+        width: var(--100vw);
+        right: calc(var(--container-padding-x) * -1);
+      }
+    }
+  }
+
   &__resources-preview {
     grid-area: resources-preview;
     padding-left: rem(80);
     padding-bottom: rem(80);
-    background: url('../../images/resources-preview/bg.png') 0 0 /cover no-repeat;
+    background:
+      url('../../images/resources-preview/bg.png') 0 0/cover no-repeat;
 
     @include laptop {
       padding-left: rem(50);
@@ -72,7 +87,7 @@
     }
 
     @include tablet {
-      width: 100vw;
+      width: var(--100vw);
       margin-left: calc(var(--container-padding-x) * -1);
       padding: rem(100) rem(40) rem(40);
       background-image: url('../../images/resources-preview/bg_tablet.png');
@@ -80,31 +95,14 @@
     }
   }
 
-  &__metrics {
-    grid-area: metrics;
-
-    @include tablet-above {
-      border-top: var(--border);
-    }
-
-    @include tablet {
-      &::before {
-        width: 100vw;
-        right: calc(var(--container-padding-x) * -1);
-      }
-    }
-  }
-
   &__advantages {
     border-block: var(--border);
-
 
     &-list {
       @include tablet-above {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
       }
-
     }
 
     &-item {

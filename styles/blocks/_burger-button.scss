@@ -6,7 +6,7 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: rem(9) rem(5);
+  padding: rem(8.5) rem(4.25);
   color: var(--color-light);
   background-color: transparent;
   border: none;
@@ -17,11 +17,10 @@
 
   &.is-active {
     .burger-button__line {
-      &:nth-child(1) {
+      &:first-child {
         rotate: 45deg;
         transform-origin: 0;
-        translate: 0.15em -0.08em;
-
+        translate: 0.25em -0.1em;
       }
 
       &:nth-child(2) {

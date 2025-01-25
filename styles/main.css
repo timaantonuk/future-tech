@@ -510,13 +510,13 @@ button[aria-label]::before {
   }
 }
 .icon--yellow-arrow::after {
-  background-image: url("../../icons/arrow-top-right_yellow.svg");
+  background-image: url("../../icons/arrow-top-right-yellow.svg");
 }
 .icon--yellow-eye::after {
-  background-image: url("../../icons/eye_yellow.svg");
+  background-image: url("../../icons/eye-yellow.svg");
 }
 .icon--gray-arrow-down::after {
-  background-image: url("../../icons/arrow-down_gray.svg");
+  background-image: url("../../icons/arrow-down-gray.svg");
 }
 
 .logo {
@@ -1135,7 +1135,7 @@ button[aria-label]::before {
     width: var(--100vw);
     margin-left: calc(var(--container-padding-x) * -1);
     padding: 6.25rem 2.5rem 2.5rem;
-    background-image: url("../../images/resources-preview/bg_tablet.png");
+    background-image: url("../../images/resources-preview/bg-tablet.png");
     background-size: contain;
   }
 }
@@ -1809,10 +1809,10 @@ button[aria-label]::before {
   --size: 1.5rem;
   width: var(--size);
   height: var(--size);
-  background: url("../../icons/star_gray.svg") center/contain no-repeat;
+  background: url("../../icons/star-gray.svg") center/contain no-repeat;
 }
 .rating-view__star.is-active {
-  background-image: url("../../icons/star_yellow.svg");
+  background-image: url("../../icons/star-yellow.svg");
 }
 @media (width <= 90.06125rem) {
   .rating-view__star {
@@ -2526,7 +2526,7 @@ button[aria-label]::before {
   width: var(--size);
   height: var(--size);
   content: "";
-  background: url("../../icons/arrow-down_white.svg") center/contain no-repeat;
+  background: url("../../icons/arrow-down-white.svg") center/contain no-repeat;
   transition-duration: var(--transition-duration);
 }
 @media (width <= 90.06125rem) {

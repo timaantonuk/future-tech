@@ -74,8 +74,7 @@
     grid-area: resources-preview;
     padding-left: rem(80);
     padding-bottom: rem(80);
-    background:
-      url('../../images/resources-preview/bg.png') 0 0/cover no-repeat;
+    background: url('../../images/resources-preview/bg.png') 0 0/cover no-repeat;
 
     @include laptop {
       padding-left: rem(50);
@@ -90,7 +89,7 @@
       width: var(--100vw);
       margin-left: calc(var(--container-padding-x) * -1);
       padding: rem(100) rem(40) rem(40);
-      background-image: url('../../images/resources-preview/bg_tablet.png');
+      background-image: url('../../images/resources-preview/bg-tablet.png');
       background-size: contain;
     }
   }
